@@ -6,9 +6,10 @@ services:
 
 before_install:
 - node --version
+- npm install
 - docker pull postgres
 - docker-compose up 
 - docker ps -a
 
 script:
-- bundle exec rake test
+- node query.js
