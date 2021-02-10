@@ -1,9 +1,12 @@
-language: ruby
+language: node_js
+    node_js: 
+      - "stable"
 
 services:
   - docker
 
 before_install:
+- node --version
 - docker pull postgres
 - docker-compose up 
 - docker ps -a
