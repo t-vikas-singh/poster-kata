@@ -7,7 +7,7 @@ const axios = require('axios');
 async function do_all() {
     const client = new Client({
         user: 'root',
-        host: '192.168.68.105',
+        host: 'localhost',
         database: 'root',
         password: 'root',
         port: 5432,
