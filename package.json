@@ -1,0 +1,23 @@
+{
+  "name": "poster-kata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "query.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mallamrekha/poster-kata.git"
+  },
+  "author": "Rekha.mallam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mallamrekha/poster-kata/issues"
+  },
+  "homepage": "https://github.com/mallamrekha/poster-kata#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "pg": "^8.5.1"
+  }
+}

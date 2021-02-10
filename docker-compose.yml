@@ -1,0 +1,39 @@
+version: '3.6'
+services:
+    postgres_source:
+        image: postgres
+        restart: always
+        environment:
+            - DATABASE_HOST=127.0.0.1
+            - POSTGRES_USER=root
+            - POSTGRES_PASSWORD=root
+            - POSTGRES_DB=root
+
+        ports:
+            - "5432:5432"
+        volumes:
+            - ./docker_postgres_init.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
+
+    postgres_dw:
+        image: postgres
+        restart: always
+        environment:
+            - DATABASE_HOST=127.0.0.1
+            - POSTGRES_USER=root
+            - POSTGRES_PASSWORD=root
+            - POSTGRES_DB=root
+
+        ports:
+            - "5400:5432"
+        volumes:
+            - ./docker_postgres_init_dw.sql:/docker-entrypoint-initdb.d/docker_postgres_init_dw.sql
+
+    pgadmin-compose:
+        image: dpage/pgadmin4
+        environment:
+            PGADMIN_DEFAULT_EMAIL: "rekha.mallam@ibm.com"
+            PGADMIN_DEFAULT_PASSWORD: "starwars"
+        ports:
+            - "16543:80"
+        depends_on:
+            - postgres_source
