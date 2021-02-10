@@ -8,8 +8,8 @@ before_install:
 - node --version
 - npm install
 - docker pull postgres
-- docker-compose up 
+- docker-compose up -d
 - docker ps -a
 
 script:
-- node query.js
+- npm test
