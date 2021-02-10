@@ -3,7 +3,7 @@ const Client = require('pg').Client
 
 const dest_client = new Client({
     user: 'root',
-    host: '192.168.68.105',
+    host: 'localhost',
     database: 'root',
     password: 'root',
     port: 5400,
