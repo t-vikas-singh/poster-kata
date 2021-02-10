@@ -1,0 +1,6 @@
+services:docker
+language: javascript
+
+before_install:
+- docker-compose up
+- node query.js
